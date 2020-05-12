@@ -1,0 +1,37 @@
+package com.example.playlist;
+
+import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
+import androidx.room.Delete;
+import androidx.room.Insert;
+import androidx.room.Query;
+import androidx.room.Update;
+
+import java.util.List;
+
+
+Dao
+public interface Playlist Dao {
+
+
+    Query("SELECT * FROM playlist ORDER BY UPPER(playlistName) ASC")
+    LiveData<List<Playlist>> getAllPlaylists();
+
+    Insert
+    void insert(Playlist playlist);
+
+
+    Update
+    void updatePlaylist(Playlist playlist);
+
+
+    Delete
+    int deletePlaylist(Playlist playlist);
+
+   Query("DELETE FROM playlists WHERE playlistName = :erasePlaylistName")
+    void deletePlaylistName(String erasePlaylistName);
+
+    Query("DELETE FROM playlist")
+    void deleteAllPlaylist();
+
+}
