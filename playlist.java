@@ -10,9 +10,9 @@ import androidx.room.ColumnInfo;
 
 
 
-public class playlist {
+public class Playlist {
 
-    public playlist(String mCreationDate, @NonNull String mTitle, String mSinger, int mScore) {
+    public Playlist(String mCreationDate, @NonNull String mTitle, String mSinger, int mScore) {
         this.mCreationDate = mCreationDate;
         this.mTitle = mTitle;
         this.mSinger = mSinger;
@@ -27,7 +27,7 @@ public class playlist {
     private String mCreationDate;
 
     @NonNull
-    @ColumnInfo(title = "playlistTitle")
+    @ColumnInfo(name = "playlistTitle")
     private String mTitle;
 
     private String mSinger;
